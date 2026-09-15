@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nai-tl-peak-screening"
+version = "1.0.0"
+description = "Interpretable local-shape screening for NaI(Tl) gamma-ray spectra"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+dependencies = [
+  "numpy",
+  "pandas",
+  "scipy",
+  "xgboost",
+  "PySide6",
+  "pyqtgraph",
+]
+
+[project.urls]
+Homepage = "https://github.com/zhangcaocao/NaI-Tl-peak-screening"
+Repository = "https://github.com/zhangcaocao/NaI-Tl-peak-screening"
+
+[tool.setuptools.packages.find]
+include = ["nai_peak*"]

@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated manuscript."
+title: "Interpretable local-shape screening for morphology-based peak detection in NaI(Tl) gamma-ray spectra"
+type: software
+version: 1.0.0
+authors:
+  - family-names: Zhang
+    given-names: Caolin
+date-released: 2026-09-15
+repository-code: "https://github.com/zhangcaocao/NaI-Tl-peak-screening"
+url: "https://github.com/zhangcaocao/NaI-Tl-peak-screening"

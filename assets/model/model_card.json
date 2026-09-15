@@ -1,0 +1,127 @@
+{
+  "schema": "nai_peak_screening_model_card_v1",
+  "version": "1.0.0",
+  "method": "interpretable_local_shape_screening",
+  "runtime_backend": "configurable_multicore_cpu",
+  "channel_count": 1024,
+  "model_file": "main_compact.ubj",
+  "model_sha256": "4080abdf98b86d30b2a89ba9f1b05a55553d00d95c9346c1141ca797659b4caa",
+  "morphology": {
+    "height": 0.0005,
+    "prominence": 0.0,
+    "spacing_fwhm": 0.1,
+    "edge_margin_channels": 2,
+    "quadratic_subchannel_refinement": true
+  },
+  "candidate_count_filter": {
+    "minimum_raw_mean_count_expected_fwhm": 1.0
+  },
+  "feature_parent_half_width_fwhm": 3.0,
+  "features": [
+    "morph_height",
+    "morph_prominence",
+    "core_concentration",
+    "inner_outer_ratio",
+    "left_right_symmetry",
+    "excess_centroid_offset",
+    "normalized_curvature",
+    "edge_core_contrast",
+    "local_roughness_ratio",
+    "nearest_max_distance_fwhm",
+    "competitor_height_ratio"
+  ],
+  "feature_groups": {
+    "G1 Morphological salience": [
+      "morph_height",
+      "morph_prominence"
+    ],
+    "G2 Local response concentration": [
+      "core_concentration",
+      "inner_outer_ratio"
+    ],
+    "G3 Centering and symmetry": [
+      "left_right_symmetry",
+      "excess_centroid_offset"
+    ],
+    "G4 Local convexity and texture": [
+      "normalized_curvature",
+      "edge_core_contrast",
+      "local_roughness_ratio"
+    ],
+    "G5 Neighbour competition": [
+      "nearest_max_distance_fwhm",
+      "competitor_height_ratio"
+    ]
+  },
+  "regions": {
+    "low": [
+      0.0,
+      100.0
+    ],
+    "mid": [
+      100.0,
+      400.0
+    ],
+    "high": [
+      400.0,
+      1024.0
+    ]
+  },
+  "classifier_nms_distance_fwhm": 0.1,
+  "default_operating_point": "fp_1",
+  "operating_points": {
+    "fp_1": {
+      "label": "1 FP/spectrum (default)",
+      "thresholds": {
+        "low": 0.1552817821502685,
+        "mid": 0.1552817821502685,
+        "high": 0.1552817821502685
+      },
+      "validation_recall": 0.9042262085740348,
+      "validation_fp_per_spectrum": 0.9979892761394102
+    },
+    "best_f1": {
+      "label": "Best F1",
+      "thresholds": {
+        "low": 0.5447484254837036,
+        "mid": 0.5447484254837036,
+        "high": 0.5447484254837036
+      },
+      "validation_recall": 0.8356643356643356,
+      "validation_fp_per_spectrum": 0.1769436997319035
+    },
+    "fp_3": {
+      "label": "3 FP/spectrum",
+      "thresholds": {
+        "low": 0.0479753501713275,
+        "mid": 0.0479753501713275,
+        "high": 0.0479753501713275
+      },
+      "validation_recall": 0.9428397689267256,
+      "validation_fp_per_spectrum": 2.9986595174262733
+    },
+    "fp_5": {
+      "label": "5 FP/spectrum",
+      "thresholds": {
+        "low": 0.0253556743264198,
+        "mid": 0.0253556743264198,
+        "high": 0.0253556743264198
+      },
+      "validation_recall": 0.9604743083003952,
+      "validation_fp_per_spectrum": 4.95911528150134
+    }
+  },
+  "contribution_reconstruction_tolerance": 5e-05,
+  "detector_profiles": {
+    "internal": {
+      "fwhm_file": "fwhm_internal.csv",
+      "fwhm_sha256": "883cf6fc5109a97461a353d6b8a67d0c3826dbb4b1b18cb701f710ca816d4b40",
+      "structure_width_channels": 99
+    },
+    "external": {
+      "fwhm_file": "fwhm_external.csv",
+      "fwhm_sha256": "527b36c013ee7f1149291dbba1af4aabc87e570deaf2c98d89edf41f6d1fe0a2",
+      "structure_width_channels": 135
+    }
+  }
+}

@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite the associated manuscript."
+message: "If you use this software, please cite this software record. For model and demonstration-data attribution, see ASSET_ATTRIBUTION.md. Related manuscript publication details are not yet verified; see README.md."
 title: "Interpretable local-shape screening for morphology-based peak detection in NaI(Tl) gamma-ray spectra"
 type: software
 version: 1.0.0

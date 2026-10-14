@@ -76,4 +76,60 @@ the checksums in `SHA256SUMS`.
 The source code is available under the Apache License 2.0 in `LICENSE`. The
 model weights and demonstration data are available under CC BY 4.0 in
 `LICENSE-ASSETS.txt`; attribution guidance is provided in
-`ASSET_ATTRIBUTION.md`. Citation metadata are provided in `CITATION.cff`.
+`ASSET_ATTRIBUTION.md`. Software citation metadata are provided in `CITATION.cff`. Academic citation
+requests do not add conditions to either licence.
+
+### Software citation
+
+When reporting research that uses this implementation, please cite the software
+record below (also available through GitHub\'s "Cite this repository" menu):
+
+> Zhang, Caolin (2026). *Interpretable local-shape screening for morphology-based
+> peak detection in NaI(Tl) gamma-ray spectra* (version 1.0.0) [Software].
+> https://github.com/zhangcaocao/NaI-Tl-peak-screening
+
+The version and release date (2026-09-15) in `CITATION.cff` describe the software,
+not a journal publication. Report the version actually used and, for an
+unreleased or modified checkout, the commit SHA and your changes. No software
+DOI is currently supplied.
+
+### Model assets and demonstration data
+
+For research using the bundled model weights, calibration files or demonstration
+data, identify the asset paths and software version or commit used, and retain
+asset attribution when sharing them. See [ASSET_ATTRIBUTION.md](ASSET_ATTRIBUTION.md)
+for the covered files and a copyable attribution example. A software citation
+alone does not replace the asset licence notices or modification disclosures.
+
+### Related academic manuscript
+
+The associated manuscript is titled *Interpretable local-shape screening for
+morphology-based peak detection in NaI(Tl) gamma-ray spectra*. As of 2026-10-14,
+its formal publication status and complete bibliographic details have not been
+verified for this repository. No verified journal DOI or public manuscript link
+is supplied here. Do not describe the software record as a published journal
+article or infer manuscript authorship from the software author field. Until a
+verifiable manuscript record is available, use the software citation above and
+the applicable asset attribution; no separate paper citation can currently be
+provided reliably.
+
+### Updating the citation after publication
+
+Once the publisher record is verified, maintainers should make one documentation
+update that:
+
+1. Adds a separate `type: article` entry under `references` in `CITATION.cff`,
+   with the verified full author list, title, journal, publication year, DOI and
+   publisher URL, plus volume, issue and pages or article number where available.
+   Keep the top-level `type: software`, software authors, version and release
+   date. Keep GitHub\'s default citation focused on the software; do not add
+   `preferred-citation` for the article.
+2. Replaces this status paragraph with the verified paper citation and DOI link,
+   and requests that research using the method cite the paper in addition to the
+   software version used.
+3. Updates the related-manuscript note in `ASSET_ATTRIBUTION.md` to link to the
+   same paper, while preserving asset attribution and licence requirements.
+
+Validate the updated CFF against the CFF 1.2.0 schema and check all three files
+for matching paper metadata. Leave unavailable fields absent rather than adding
+placeholder or guessed publication information.
